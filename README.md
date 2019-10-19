@@ -14,6 +14,10 @@ To run this;
   
 	`git clone https://github.com/anorebel/TubeD.git`
  
+  - Enter the directory
+  
+	  `cd TubeD`
+ 
   - Install dependencies
   
 	  `npm install`
@@ -36,7 +40,6 @@ or
 #### TODO
 
   [ ] Add desktop notifications
-  
   [ ] Add settings page
-  
   [ ] Add a release
+  
