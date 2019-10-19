@@ -1,0 +1,48 @@
+{
+  "name": "TubeD",
+  "version": "1.0.0",
+  "description": "A minimal Electron-based youtube downloader",
+  "main": "main.js",
+  "scripts": {
+    "build:css": "postcss src/tailwind.css -o src/static/css/tailwind.min.css",
+    "watch": "watch 'yarn build:css' src/static/css",
+    "electron": "electron .",
+    "serve": "nodemon server.js",
+    "dev": "concurrently -k \"nodemon server.js\" \"watch 'yarn build:css' src/static/css\" \" electron .\"",
+    "start": "concurrently -k \"nodemon server.js\" \"electron .\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anorebel/TubeD.git"
+  },
+  "author": "AnoRebel <hacker4rebel@gmail.com> (https://www.hackeac.com/)",
+  "license": "MIT",
+  "keywords": [
+    "Electron",
+    "youtube",
+    "downloader"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "electron": "^6.0.3",
+    "electron-reload": "^1.5.0",
+    "nodemon": "^1.19.1",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "cors": "^2.8.5",
+    "cssnano": "^4.1.10",
+    "electron-context-menu": "^0.15.0",
+    "electron-util": "^0.12.1",
+    "express": "^4.17.1",
+    "file-system": "^2.2.2",
+    "get-port": "^5.0.0",
+    "jquery": "^3.4.1",
+    "js-file-download": "^0.4.8",
+    "moment": "^2.24.0",
+    "mprogress": "^0.1.1",
+    "tailwindcss": "^1.1.2",
+    "ytdl-core": "^0.29.5"
+  }
+}
