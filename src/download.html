@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Download</title>
+    <!-- Progressbar CSS CDN -->
+    <link rel="stylesheet" type="text/css" href="../node_modules/mprogress/mprogress.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/tailwind.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+  </head>
+
+  <body class="h-screen font-sans scrolling-auto overflow-hidden">
+
+    <div class="w-full flex container">
+      <div class="mx-auto">
+        <div class="text-white font-semibold">Filename: <span id="fname"></span></div>
+        <div class="loader" id="loader">
+          <div class="info" id="info"></div>
+          <h1 class="font-semibold text-white" id="status"></h1>
+          <div class="progress-bar" id="progress-bar">
+            <div class="progress" id="progress"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full container flex justify-end">
+      <button class="cancel-button mt-1 mb-4 flex-shrink-0 bg-transparent hover:bg-red-400 border-red-300 hover:border-red-400 font-bold border text-white py-1 px-2 rounded" type="button">
+        Cancel
+      </button>
+      <button class="download-button mx-6 mt-1 mb-4 flex-shrink-0 bg-green-500 hover:bg-green-300 border-green-400 hover:border-green-600 font-bold border text-white inline-flex items-center py-1 px-3 rounded" type="button">
+        <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+        <span>Download</span>
+      </button>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script type="text/javascript">
+      window.$ = window.jQuery = require('jquery');
+    </script>
+    <!-- Progressbar JS CDN -->
+    <script type="text/javascript" src="../node_modules/mprogress/mprogress.min.js"></script>
+    <!-- <script>require('./static/js/download.js')</script> -->
+    <script type="text/javascript" src="static/js/download.js"></script>
+  </body>
+</html>

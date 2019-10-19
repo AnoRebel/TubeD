@@ -1,0 +1,104 @@
+body {
+	text-align: center;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	padding: 1rem 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+input[type="radio"] + label span {
+	transition: background .2s,
+		transform .2s;
+}
+
+input[type="radio"] + label span:hover,
+input[type="radio"] + label:hover span {
+	transform: scale(1.2);
+}
+
+input[type="radio"]:checked + label span {
+	background-color: #68D391;
+	box-shadow: 0 0 0 2px #48BB78 inset;
+}
+
+input[type="radio"]:checked {
+	color: #68D391;
+}
+
+#status {
+	text-align: center;
+	font-size: 16px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	padding: 0.5rem 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	opacity: 0;
+}
+
+#fname, #progress-bar, #progress, #status {
+	-webkit-app-region: drag;
+	-webkit-user-select: none;
+}
+
+.info {
+	/*margin-top: 0.5em;*/
+	opacity: 0;
+	height: 3em;
+	color: #f00;
+}
+
+/*.error a {
+	padding: 0;
+	display: inline;
+	color: inherit;
+	text-decoration: underline;
+}*/
+
+.progress-bar {
+	position: absolute;
+	background: #444;
+	color: #fff;
+	line-height: 0;
+	text-align: left;
+	top: 50%;
+	left: 25%;
+	width: 200px;
+	/*margin-left: -50px;*/
+	height: 4px;
+	margin-top: -6px;
+	z-index: 10;
+	opacity: 0;
+}
+
+.loading .progress-bar {
+	opacity: 1;
+}
+
+.loading-complete .progress-bar {
+	transition: opacity .2s .2s ease-out;
+	opacity: 0;
+}
+
+.progress-bar .progress {
+	background: #1ac3c3;
+	display: inline-block;
+	width: 100%;
+	transform-origin: left;
+	transform: scaleX(0);
+	box-sizing: border-box;
+	height: 100%;
+	box-shadow: 0 0 4px 1px #627188;
+}
+
+.loading .progress {
+	transition: transform 100ms linear;
+}
+
+.loading-error .info {
+	transition: opacity .5s ease-in;
+	opacity: 1;
+}
